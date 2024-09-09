@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .gradient-text {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .gradient-text-hover:hover {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Default (Light mode) */
+.bg-neutral {
+  background-color: #ffffff;
+}
+
+.text-neutral-content {
+  color: #000000;
+}
+
+.border {
+  border-color: #dddddd;
+}
+
+button {
+  border-color: #000000;
+  color: #000000;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .bg-neutral {
+    background-color: #000000;
+  }
+
+  .text-neutral-content {
+    color: #ffffff;
+  }
+
+  .border {
+    border-color: #333333;
+  }
+
+  button {
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+
+  button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+
