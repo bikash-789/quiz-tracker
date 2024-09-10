@@ -1,34 +1,15 @@
 "use client";
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import Button from "@/components/Buttons";
 
 export default function LoginPage() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    // Check system theme preference
-    const darkModeMediaQuery = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    );
-    setIsDarkMode(darkModeMediaQuery.matches);
-
-    // Update theme on change
-    darkModeMediaQuery.addEventListener("change", (e) => {
-      setIsDarkMode(e.matches);
-    });
-  }, []);
-
   return (
     <div
-      className={`w-full p-4 sm:p-0 flex items-center justify-center ${
-        isDarkMode ? " text-white" : "bg-white text-black"
+      className={`w-full p-4 sm:p-0 flex items-center justify-center h-full dark:bg-gray-900 dark:text-white bg-white text-black"
       }`}
     >
       <div
-        className={`w-full max-w-md p-6 ${
-          isDarkMode ? "bg-gray-800" : "bg-gray-100"
-        } border border-gray-300`}
+        className={`w-full max-w-md p-6 dark:bg-black bg-gray-100 border border-gray-300`}
       >
         <h2 className="text-3xl font-bold text-center mb-6">Login</h2>
         <form className="flex flex-col gap-4">
@@ -48,7 +29,7 @@ export default function LoginPage() {
             id="password"
             type="password"
             placeholder="Enter your password"
-            className="p-2 border border-gray-300 text-black bg-transparent focus-within:outline-none"
+            className="p-2 border border-gray-300 text-black dark:text-white bg-transparent focus-within:outline-none"
           />
           <Button type="primary" className="mt-4">
             Login

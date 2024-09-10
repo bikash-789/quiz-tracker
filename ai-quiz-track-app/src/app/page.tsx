@@ -3,14 +3,14 @@ import Button from "@/components/Buttons";
 
 const Home: React.FC = () => {
   return (
-    <div className="">
+    <div className="dark:bg-gray-900 h-full w-full flex flex-col gap-8 items-center justify-center">
       {/* Main content */}
       <main className="flex flex-col gap-8 items-center sm:items-start w-full max-w-4xl">
         <section className="text-center sm:text-left">
-          <h1 className="text-4xl sm:text-5xl font-bold">
+          <h1 className="text-4xl sm:text-5xl font-bold px-3 sm:px-0 py-1">
             Track your progress with AI-powered quizzes!
           </h1>
-          <p className="mt-4 text-lg">
+          <p className="mt-4 text-lg px-3 sm:px-0">
             Welcome to AIQuizTrack, a powerful tool that helps you track your
             learning progress with personalized quizzes, AI-generated questions,
             and insightful feedback. Start enhancing your knowledge today!
@@ -20,7 +20,7 @@ const Home: React.FC = () => {
           </Button>
         </section>
 
-        <section id="features" className="w-full mt-16 px-8 sm:px-0 pb-2">
+        <section id="features" className="w-full mt-16 px-8 sm:px-0 pb-6">
           <h2 className="text-3xl font-semibold">Features</h2>
           <ul className="mt-4 grid gap-6 sm:grid-cols-2">
             <li className="p-4 border">
