@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@/components/Buttons";
+import { Button } from "@/components/ui/button";
 
 const Home: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const Home: React.FC = () => {
             learning progress with personalized quizzes, AI-generated questions,
             and insightful feedback. Start enhancing your knowledge today!
           </p>
-          <Button type="primary" className="mt-6">
+          <Button type="button" className="mt-6">
             Get Started
           </Button>
         </section>

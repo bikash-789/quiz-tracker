@@ -1,8 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Button from "@/components/Buttons";
-
+import { Button } from "@/components/ui/button";
 const SignUp: React.FC = () => {
   return (
     <div
@@ -40,7 +39,7 @@ const SignUp: React.FC = () => {
             placeholder="Enter your password"
             className="p-2 border border-gray-300 text-black dark:text-white bg-transparent focus-within:outline-none"
           />
-          <Button type="primary" className="mt-4">
+          <Button type="button" className="mt-4">
             Signup
           </Button>
         </form>
