@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useRouter } from "next/navigation";
-
+import Link from "next/link";
 const LoginValidation = z.object({
   email: z.string().email("Invalid email address"),
   password: z.string().min(6, "Password must be at least 6 characters long"),
@@ -76,8 +76,11 @@ const LoginForm = () => {
         />
 
         <Button type="submit" className="bg-blue-500 text-white">
-          Log In
+          Login
         </Button>
+        <Link href="/signup" className="text-blue-500 hover:underline">
+          Don't have an account? Register
+        </Link>
       </form>
     </Form>
   );

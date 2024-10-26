@@ -24,8 +24,8 @@ type FormFieldContextValue<
   name: TName;
 };
 
-const FormFieldContext = React.createContext<FormFieldContextValue>(
-  {} as FormFieldContextValue
+const FormFieldContext = React.createContext<FormFieldContextValue | undefined>(
+  undefined
 );
 
 const FormField = <
@@ -43,6 +43,9 @@ const FormField = <
 
 const useFormField = () => {
   const fieldContext = React.useContext(FormFieldContext);
+  if (!fieldContext) {
+    throw new Error("useFormField must be used within a FormFieldContext");
+  }
   const itemContext = React.useContext(FormItemContext);
   const { getFieldState, formState } = useFormContext();
 
@@ -95,7 +98,7 @@ const FormLabel = React.forwardRef<
   return (
     <Label
       ref={ref}
-      className={cn(error && "text-red-500", className)} // Adjust color palette here
+      className={cn(error && "text-red-500", className)}
       htmlFor={formItemId}
       {...props}
     />

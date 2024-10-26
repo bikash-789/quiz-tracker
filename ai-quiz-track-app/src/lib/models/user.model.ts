@@ -28,6 +28,7 @@ const userSchema = new Schema({
 
 export interface IUser extends Document {
   name: string;
+  _id: string;
   email: string;
   password: string;
   quizzes: Schema.Types.ObjectId[];
