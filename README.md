@@ -2,6 +2,7 @@
 
 Quiz Tracker is a website where you can test what you know about any topic through fun quizzes. You can use AI to make quizzes from materials you upload. The site helps you see your progress and find what topics you need to work on.
 
+Screenshots:
 <img width="365" alt="Screenshot 2025-04-26 at 00 18 04" src="https://github.com/user-attachments/assets/30408631-9708-4415-a852-789f0c4f645e" />
 <img width="362" alt="Screenshot 2025-04-26 at 00 19 09" src="https://github.com/user-attachments/assets/5bea0f9f-c064-4624-b484-eb21e6a8637a" />
 <img width="362" alt="Screenshot 2025-04-26 at 00 19 56" src="https://github.com/user-attachments/assets/0fb86855-1be5-4edb-b764-2fe41c43417a" />
